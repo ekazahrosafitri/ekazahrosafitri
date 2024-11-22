@@ -86,7 +86,7 @@ a{
     padding-left: 50px;
 }
 .section-title-2{
-    padding-left: 300px;
+    padding-left: 190px;
 }
 .pre-title-2::before{
     content: "";
@@ -95,7 +95,7 @@ a{
     background: var(--linecolor);
     position: absolute;
     display: block;
-    left: 350px;
+    left: 200px;
     top: 50%;
 }
 .pre-title-2{
@@ -103,7 +103,7 @@ a{
     letter-spacing: .5rem;
     color: var(--secondaryTextcolor);
     position: relative;
-    padding-left: 390px;
+    padding-left: 250px;
     width: fit-content;
     font-weight: 400;
     font-size: 0.9rem;
