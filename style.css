@@ -1,138 +1,161 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800;1,900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
-*{
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+:root{
+    --primaryTextcolor:#0c0726;
+    --secondaryTextcolor:#353d60;
+  
+    --bordercolor:#37406e;
+    --linecolor:#1d243d;
+  
+    --primaryBackgroundColor:#C6CAEB;
+    --secondaryBackgroundColor:#9AA0C8;
+    --thirdBackgroundColor:#ffffff;
+  
+    --primaryIconColor:#1a1a4a;
+    --secondaryIconColor:#515a82;
+  
+    --sectionPadding: 6rem 0;
+  
+    --itemBorderradius:0.7rem;
+  }
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
-:root{
-  --primaryTextcolor:#0c0726;
-  --secondaryTextcolor:#353d60;
 
-  --bordercolor:#37406e;
-  --linecolor:#1d243d;
-
-  --primaryBackgroundColor:#C6CAEB;
-  --secondaryBackgroundColor:#9AA0C8;
-  --thirdBackgroundColor:#ffffff;
-
-  --primaryIconColor:#1a1a4a;
-  --secondaryIconColor:#515a82;
-
-  --sectionPadding: 6rem 0;
-
-  --itemBorderradius:0.7rem;
-}
-body{
-  font-family: "Fira Sans", serif;
-  font-weight: 600;
-  font-style: normal;
-}
-h1,h2,h3,h4,h5,h6, strong{
-  color: var(--primaryTextcolor);
+body {
+  font-family: "Roboto", sans-serif;
 }
 
-p{
-  font-size: 1rem;
-  line-height: 1.9rem;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  color: var(--primaryTextColor);
 }
-p, span, label, input, textarea, li{
-  color: var(--secondaryTextcolor);
+
+p {
+  font-size: 1rem; /* 16 px */
+  line-height: 1.9rem; /*30.4 px */
 }
-a{
+
+p,
+span,
+label,
+input,
+textarea,
+li {
+  color: var(--secondaryTextColor);
+}
+
+a {
   text-decoration: none;
 }
-.main-container{
+
+/* End Preparation */
+
+.main-container {
   width: 1200px;
   margin: 0 auto;
 }
-@media screen and(max-width: 1200px){
-  .main-container{
+
+@media screen and (max-width: 1200px) {
+  .main-container {
     width: 90%;
   }
 }
-.pre-title{
+
+/* Buttons */
+.btn {
+  padding: 1rem 1.5rem;
+  background: white;
+  border: 1.5px solid var(--borderColor);
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.btn:hover {
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+
+/* Titles */
+.section-title {
+  margin: 1rem 0 4rem;
+  font-size: 2rem;
+}
+
+.pre-title {
   text-transform: uppercase;
-  letter-spacing: .5rem;
-  color: var(--secondaryTextcolor);
+  letter-spacing: 0.5rem;
+  color: var(--secondaryTextColor);
   position: relative;
-  padding-left: 90px;
+  padding-left: 40px;
   width: fit-content;
   font-weight: 400;
   font-size: 0.9rem;
 }
-.pre-title::before{
+
+.pre-title::before {
   content: "";
   width: 30px;
   height: 1px;
-  background: var(--linecolor);
+  background: var(--lineColor);
   position: absolute;
   display: block;
-  left: 40px;
+  left: 0;
   top: 50%;
 }
-.section-title{
-  padding-left: 50px;
-}
-.pre-title2{
-  text-transform: uppercase;
-  letter-spacing: .5rem;
-  color: var(--secondaryTextcolor);
-  position: relative;
-  padding-left: 150px;
-  width: fit-content;
-  font-weight: 400;
-  font-size: 0.9rem;
-}
-.pre-title2::before{
-  content: "";
-  width: 30px;
-  height: 1px;
-  background: var(--linecolor);
-  position: absolute;
-  display: block;
-  left: 100px;
-  top: 50%;
-}
-.section-title2{
-  padding-left: 80px;
-}
-.grid-3{
+
+/* Layouts */
+.grid-3 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 0.4rem;
-  padding-left: 5rem;
-  padding-right: 5rem;
-  padding-top: 2rem;
+  /* grid-template-columns: 1fr 1fr 1fr; use this first, use code below when its time for explaining responsive design part */
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3rem;
 }
-.nav{
+
+/* --- Logo and Navigation Menu --- */
+.nav {
   display: flex;
   justify-content: space-between;
-  padding: 0rem;
+  padding: 2rem 0;
 }
-.nav ul{
+
+nav ul {
   list-style: none;
   display: flex;
   gap: 3rem;
-  right: 0px;
-  padding-left: 40rem;
 }
-.logo{
+
+/* Logo */
+.logo {
   display: flex;
   align-items: center;
   font-weight: 700;
   font-size: 2rem;
 }
-.logo a{
-  color: var(--primaryTextcolor);
+
+.logo a {
+  color: var(--primaryTextColor);
 }
-.nav ul li{
+
+/* Navigation Menu */
+nav ul li {
   display: flex;
   align-items: center;
 }
-.nav ul li a{
-  color: var(--primaryTextcolor);
+
+nav ul li a {
+  color: var(--primaryTextColor);
 }
+
+/* Burger - Save for later on video */
 .burger div {
   width: 25px;
   height: 2px;
@@ -149,271 +172,317 @@ a{
   top: 33px;
   right: 35px;
 }
-#hero{
+
+/* Hero Section */
+#hero {
   height: 720px;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  /* We're not going to use automatic template columns, because we need to know when the columns is go below. So we can exchange the order of the element */
   align-items: center;
 }
-.hero-name{
+
+.hero-name {
   font-size: 3rem;
   font-weight: 700;
   margin: 0.5rem 0 1rem;
 }
-.hero-name span{
-  color: var(--primaryIconColor);
+
+.hero-name span {
+  color: var(--primaryIconColor) !important;
 }
-.hero-right img{
-  width: 80%;
-  bottom: 40px;
+
+.hero-right img {
+  width: 90%;
 }
-.hero-right{
+
+.hero-right {
   display: flex;
   justify-content: center;
 }
-.portfolios{
-  padding: 10px; 
+
+
+
+/* Portfolios */
+#portfolios {
+  padding: var(--sectionPadding);
 }
-  
-.portfolios:hover {
-  border: 1px solid black;
-  transform: scale(1.05);
+
+.portfolio {
+  border-radius: var(--itemBorderRadius);
+  overflow: hidden; /* supaya gambar yang diatas itu dia ngikut border radiusnya, karena yang dikasih border radius disini adalah div portfolio ini */
+  border: 1px solid var(--borderColor);
 }
-  
-.portfolios:active {
-  transform: scale(0.95) rotateZ(1.7deg);
-}
-.portfolio{
-  border-radius: var(--itemBorderradius);
-  overflow: hidden;
-  border: 1px solid var(--bordercolor);
-    
-}
-.portfolio-cover{
+
+.portfolio-cover {
   height: 250px;
 }
-.portfolio-cover img{
+
+.portfolio img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 10px;
 }
-.protfolio-info{
+
+.portfolio-info {
   padding: 2rem 1.5rem;
 }
-.protfolio-title{
+
+.portfolio-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
 }
-.portfolio h4{
+
+.portfolio h4 {
   font-weight: 500;
   font-size: 1.05rem;
 }
-.portfolio-tags{
+
+
+.portfolio-tags {
   display: flex;
   gap: 1rem;
   margin: 1rem 0;
 }
-.portfolio-tags div{
+
+.portfolio-tags div {
   font-size: 0.9rem;
-  padding: 0.4rem 0.1rem;
-  color: var(--secondaryTextcolor);
+  border: 1px solid var(--borderColor);
+  padding: 0.4rem 1rem;
+  color: var(--secondaryTextColor);
 }
-#contact{
+
+.portfolio-tags div {
+  font-size: 0.9rem;
+  border: 1px solid var(--borderColor);
+  padding: 0.4rem 1rem;
+  color: var(--secondaryTextColor);
+}
+/* Contact Section */
+#contact {
   padding: var(--sectionPadding);
 }
-.contact{
-  padding-top: 70px;
+
+.contact {
   display: grid;
+  /* grid-template-columns: 1fr 1fr; */
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 3rem;
 }
-.contact-form div{
+
+.contact-form div {
   margin-bottom: 1.4rem;
 }
-.contact-form input, 
-.contact-form textarea{
+
+.contact-form input,
+.contact-form textarea {
   width: 100%;
   padding: 0.75rem 1.3rem;
   font-family: "Roboto", sans-serif;
-  background: var(--thirdBackgroundColor);
-  border: 1px solid var(--bordercolor);
+  border: 1px solid #353d60;
   border-radius: 3px;
   resize: none;
 }
+
 .contact-form input::placeholder,
-.contact-form textarea::placeholder{
-  color: black;
+.contact-form textarea::placeholder {
+  color: #9d9fa1;
 }
+
 .contact-form input:focus,
-.contact-form textarea:focus{
+.contact-form textarea:focus {
   outline: none;
-  border: 1px solid #d6d1d1;
+  border: 1px solid #7d7d7d;
 }
-.contact-item{
+
+.btn-submit {
+  width: 100%;
+  padding: 0.75rem 1.3rem;
+  background-color: var(--primaryIconColor);
+  color:black;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.btn-submit:hover {
+  background-color: var(--primaryIconColorHover);
+}
+
+/* Contact Section - Right Side */
+.contact-item {
   display: flex;
   gap: 1.5rem;
   margin-bottom: 2.5rem;
 }
-.contact-item-icon{
+
+.contact-item-icon {
   background: var(--thirdBackgroundColor);
+  /* padding: 0.8rem 1rem; */
   width: 53px;
   height: 53px;
   border-radius: 9px;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
-.contact-item-icon svg{
+
+.contact-item-icon svg {
   fill: var(--primaryIconColor);
 }
-.contact-item-detail h4{
+
+.contact-item-detail h4 {
   margin-bottom: 0.6rem;
 }
 
+/* Footer Section */
+footer {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.footer-icons {
+  margin-bottom: 1rem;
+}
+
+.footer-icons a {
+  margin: 0 0.5rem;
+}
+
+.footer-icons svg {
+  fill: #3e3f40;
+}
+
+.footer-icons a:hover svg {
+  fill: #000;
+}
 .animated-button {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  padding: .75rem 1.3rem;
-  border: 4px solid;
-  border-color: transparent;
-  font-size: 16px;
-  background-color: inherit;
-  border-radius: 100px;
-  font-weight: 600;
-  color: var(--secondaryIconColor);
-  box-shadow: 0 0 0 2px var(--secondaryIconColor);
-  cursor: pointer;
-  overflow: hidden;
-  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-}
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: .75rem 1.3rem;
+    border: 4px solid;
+    border-color: transparent;
+    font-size: 16px;
+    background-color: inherit;
+    border-radius: 100px;
+    font-weight: 600;
+    color: var(--secondaryIconColor);
+    box-shadow: 0 0 0 2px var(--secondaryIconColor);
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+    
+  .animated-button svg {
+    position: absolute;
+    width: 24px;
+    fill: var(--secondaryIconColor);
+    z-index: 9;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .animated-button .arr-1 {
+    right: 16px;
+  }  
+  .animated-button .arr-2 {
+    left: -25%;
+  }  
+  .animated-button .circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-color: var(--secondaryIconColor);
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  } 
+  .animated-button .text {
+    position: relative;
+    z-index: 1;
+    transform: translateX(-12px);
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }  
+  .animated-button:hover {
+    box-shadow: 0 0 0 12px transparent;
+    color: #212121;
+    border-radius: 12px;
+  }  
+  .animated-button:hover .arr-1 {
+    right: -25%;
+  }  
+  .animated-button:hover .arr-2 {
+    left: 16px;
+  }  
+  .animated-button:hover .text {
+    transform: translateX(12px);
+  }  
+  .animated-button:hover svg {
+    fill: #212121;
+  }
+    
+  .animated-button:active {
+    scale: 0.95;
+    box-shadow: 0 0 0 4px var(--secondaryIconColor);
+  }
+    
+  .animated-button:hover .circle {
+    width: 220px;
+    height: 220px;
+    opacity: 1;
+  }
+   
   
-.animated-button svg {
-  position: absolute;
-  width: 24px;
-  fill: var(--secondaryIconColor);
-  z-index: 9;
-  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
-}
-.animated-button .arr-1 {
-  right: 16px;
-}  
-.animated-button .arr-2 {
-  left: -25%;
-}  
-.animated-button .circle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 20px;
-  height: 20px;
-  background-color: var(--secondaryIconColor);
-  border-radius: 50%;
-  opacity: 0;
-  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
-} 
-.animated-button .text {
-  position: relative;
-  z-index: 1;
-  transform: translateX(-12px);
-  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
-}  
-.animated-button:hover {
-  box-shadow: 0 0 0 12px transparent;
-  color: #212121;
-  border-radius: 12px;
-}  
-.animated-button:hover .arr-1 {
-  right: -25%;
-}  
-.animated-button:hover .arr-2 {
-  left: 16px;
-}  
-.animated-button:hover .text {
-  transform: translateX(12px);
-}  
-.animated-button:hover svg {
-  fill: #212121;
-}
+  #checkbox {
+    display: none;
+  }
+    
+  .toggle {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition-duration: .5s;
+  }
+  button {
+    align-items: center;
+    background-color: transparent;
+    color: black;
+    cursor: pointer;
+    display: flex;
+    font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+    text-decoration: none;
+    text-transform: uppercase;
+    outline: 0;
+    border: 0;
+    padding: 1rem;
+  }
   
-.animated-button:active {
-  scale: 0.95;
-  box-shadow: 0 0 0 4px var(--secondaryIconColor);
-}
+  button:before {
+    background-color: var(--secondaryBackgroundColor);
+    content: "";
+    display: inline-block;
+    height: 1px;
+    margin-right: 10px;
+    transition: all .42s cubic-bezier(.25,.8,.25,1);
+    width: 0;
+  }
   
-.animated-button:hover .circle {
-  width: 220px;
-  height: 220px;
-  opacity: 1;
-}
- 
-.btn {
-  font-family: inherit;
-  display: inline-block;
-  width: 8em;
-  height: 2.6em;
-  line-height: 2.5em;
-  margin: 20px;
-  position: relative;
-  cursor: pointer;
-  overflow: hidden;
-  border: 2px solid var(--secondaryBackgroundColor);
-  transition: color 0.5s;
-  z-index: 1;
-  font-size: 17px;
-  border-radius: 6px;
-  font-weight: 500;
-  color: var(--secondaryBackgroundColor);
-}
-  
-.btn:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  background: var(--secondaryBackgroundColor);
-  height: 150px;
-  width: 200px;
-  border-radius: 50%;
-}
-  
-.btn:hover {
-  color: #fff;
-}
-  
-.btn:before {
-  top: 100%;
-  left: 100%;
-  transition: all 0.7s;
-}
-  
-.btn:hover:before {
-  top: -30px;
-  left: -30px;
-}
-  
-.btn:active:before {
-  background: var(--secondaryBackgroundColor);
-  transition: background 0s;
-}
- /* From Uiverse.io by vinodjangid07 */ 
-#checkbox {
-  display: none;
-}
-  
-.toggle {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  transition-duration: .5s;
-}
+  button:hover:before {
+    background-color: var(--secondaryBackgroundColor);
+    width: 3rem;
+  }
