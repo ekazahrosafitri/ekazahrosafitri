@@ -58,7 +58,9 @@
       transform: translateX(0);
     }
     /* End of Navigation */
-  
+    .grid-3{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
     :root {
       --sectionPadding: 4rem 0;
     }
