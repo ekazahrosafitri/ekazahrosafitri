@@ -59,7 +59,7 @@
     }
     /* End of Navigation */
     .grid-3{
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
     }
     :root {
       --sectionPadding: 4rem 0;
@@ -124,5 +124,8 @@
     .pre-title {
       font-size: 0.7rem;
     }
+    .grid-3{
+      grid-template-columns: 1fr;
+     }
   }
   
